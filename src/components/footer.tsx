@@ -7,7 +7,7 @@ export default function Footer() {
       <p className="mr-2">
         Check out the code at{" "}
         <a
-          href="https://github.com/marceperez99/story-gpt"
+          href={process.env.NEXT_PUBLIC_GITHUB_REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-500"
@@ -18,7 +18,7 @@ export default function Footer() {
       <p className="mr-2">
         Created by{" "}
         <a
-          href="https://www.linkedin.com/in/marceloperez99/"
+          href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-500"
