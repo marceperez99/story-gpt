@@ -45,7 +45,7 @@ const StoryPrompt = ({ prompt }: { prompt: Story }) => {
       onClick={() => {
         push("/" + prompt.id);
       }}
-      className="bg-white border cursor-defautl border-gray-300 rounded shadow-md p-4 text-black hover:shadow-lg hover:border-primary hover:border-2 transition duration-300"
+      className="bg-white border-2 border-transparent cursor-default border-gray-300 rounded shadow-md p-4 text-black hover:shadow-lg hover:border-primary  transition duration-300"
     >
       {prompt.prompt}
     </div>

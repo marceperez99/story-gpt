@@ -1,10 +1,15 @@
 import { Story } from "@/types/story.type";
+import prompts from "@/utils/prompts";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: Story[] = [];
+const initialState: Story[] = prompts.map((prompt) => ({
+  id: prompt.id,
+  title: prompt.title,
+  prompt: prompt.description,
+}));
 
 export const storiesSlice = createSlice({
-  name: "story",
+  name: "stories",
   initialState,
   reducers: {
     reset: () => initialState,

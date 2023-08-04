@@ -2,11 +2,20 @@
 import { useAppSelector } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
+import { Story as IStory } from "@/types/story.type";
+import { useEffect } from "react";
+import { store } from "@/redux/store";
+import { setStory } from "@/redux/features/selectedStorySlice";
 
-export const Story = ({ storyId }: { storyId: string }) => {
+export const Story = ({ story: data }: { story: IStory }) => {
   const { back } = useRouter();
-  const stories = useAppSelector((state) => state.storiesReducer);
-  const story = stories.find((story) => story.id === storyId);
+  const story = useAppSelector((state) => state.storyReducer);
+  useEffect(() => {
+    store.dispatch(setStory(data));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleSaveToFile = () => {};
   const handleUploadToS3 = () => {};
 
