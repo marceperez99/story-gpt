@@ -44,6 +44,7 @@ const fetchData = async (): Promise<Story[]> => {
     id: prompt.id,
     title: prompt.title,
     prompt: prompt.description,
+    // @ts-ignore
     body: stories[prompt.id],
   }));
 };
