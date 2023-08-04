@@ -22,8 +22,7 @@ const fetchStory = cache(async (id: string): Promise<TStory | undefined> => {
         body: await getChatResponse(prompt.description),
       };
     } catch (error) {
-      console.log(error);
-      throw error;
+      throw new Error(error.response?.data?.error?.message);
     }
   }
 
