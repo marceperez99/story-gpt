@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-storygpt-dev-140804-authRole",
+      "UnauthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-140804-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-140804-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-storygpt-dev-140804-deployment",
+      "UnauthRoleName": "amplify-storygpt-dev-140804-unauthRole",
+      "StackName": "amplify-storygpt-dev-140804",
+      "StackId": "arn:aws:cloudformation:us-east-2:712200654364:stack/amplify-storygpt-dev-140804/08576430-33bb-11ee-85f6-02971358fdbb",
+      "AmplifyAppId": "d2t9mcdlvjzrgg"
+    },
+    "categories": {
+      "auth": {
+        "storygpta3ac538e": {}
+      },
+      "storage": {
+        "storygpt": {}
+      }
+    }
+  }
+}

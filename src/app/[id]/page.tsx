@@ -22,6 +22,7 @@ const fetchStory = cache(async (id: string): Promise<TStory | undefined> => {
         body: await getChatResponse(prompt.description),
       };
     } catch (error) {
+      // @ts-ignore
       throw new Error(error.response?.data?.error?.message);
     }
   }
