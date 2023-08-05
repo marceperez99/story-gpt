@@ -1,22 +1,22 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-storygpt-dev-140804-authRole",
-      "UnauthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-140804-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-140804-authRole",
+      "AuthRoleName": "amplify-storygpt-dev-145126-authRole",
+      "UnauthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-145126-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::712200654364:role/amplify-storygpt-dev-145126-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-storygpt-dev-140804-deployment",
-      "UnauthRoleName": "amplify-storygpt-dev-140804-unauthRole",
-      "StackName": "amplify-storygpt-dev-140804",
-      "StackId": "arn:aws:cloudformation:us-east-2:712200654364:stack/amplify-storygpt-dev-140804/08576430-33bb-11ee-85f6-02971358fdbb",
-      "AmplifyAppId": "d2t9mcdlvjzrgg"
+      "DeploymentBucketName": "amplify-storygpt-dev-145126-deployment",
+      "UnauthRoleName": "amplify-storygpt-dev-145126-unauthRole",
+      "StackName": "amplify-storygpt-dev-145126",
+      "StackId": "arn:aws:cloudformation:us-east-2:712200654364:stack/amplify-storygpt-dev-145126/170b5f30-33c1-11ee-9b80-0ade8f8dca01",
+      "AmplifyAppId": "dg3nw00polzqm"
     },
     "categories": {
-      "auth": {
-        "storygpta3ac538e": {}
-      },
-      "storage": {
-        "storygpt": {}
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dg3nw00polzqm",
+          "type": "cicd"
+        }
       }
     }
   }
