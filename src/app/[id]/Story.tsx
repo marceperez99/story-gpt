@@ -6,6 +6,9 @@ import { Story as IStory } from "@/types/story.type";
 import { useEffect } from "react";
 import { store } from "@/redux/store";
 import { setStory } from "@/redux/features/selectedStorySlice";
+import { Storage } from "aws-amplify";
+import awsSetup from "../../aws-exports";
+Storage.configure({ awsSetup });
 
 export const Story = ({ story: data }: { story: IStory }) => {
   const { back } = useRouter();
@@ -16,8 +19,17 @@ export const Story = ({ story: data }: { story: IStory }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSaveToFile = () => {};
-  const handleUploadToS3 = () => {};
+  const handleUploadToS3 = async () => {
+    try {
+      const data = await Storage.put(`${story.id}.txt`, story.body, {
+        level: "public",
+        contentType: "text/plain",
+      });
+      console.log("File uploaded successfully:", data);
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
 
   return (
     <div className="flex flex-1 p-4 max-w-4xl mx-auto my-auto ">

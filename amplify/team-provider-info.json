@@ -17,6 +17,12 @@
           "appId": "dg3nw00polzqm",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "storygpt68af5bec": {}
+      },
+      "storage": {
+        "storygptstorage": {}
       }
     }
   }
