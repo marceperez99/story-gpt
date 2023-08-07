@@ -13,18 +13,19 @@ export default async function Home(props: { params: { id: string } }) {
 
 const fetchStory = cache(async (id: string): Promise<TStory | undefined> => {
   const prompt = prompts.find((prompt) => prompt.id === id);
+  const token = process.env.OPENAI_API_KEY || "";
   if (prompt) {
-    try {
-      return {
-        id: prompt.id,
-        prompt: prompt.description,
-        title: prompt.title,
-        body: await getChatResponse(prompt.description),
-      };
-    } catch (error) {
-      // @ts-ignore
-      throw new Error(error.response?.data?.error?.message);
-    }
+    // try {
+    return {
+      id: prompt.id,
+      prompt: prompt.description,
+      title: prompt.title,
+      body: await getChatResponse(prompt.description, token),
+    };
+    // } catch (error) {
+    //   // @ts-ignore
+    //   throw new Error(error.response?.data?.error?.message);
+    // }
   }
 
   return undefined;
